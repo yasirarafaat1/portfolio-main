@@ -1,0 +1,34 @@
+
+{
+  "glyphs": {},
+  "familyName": "helvetiker",
+  "ascender": 0.9,
+  "descender": -0.21,
+  "underlinePosition": -0.1,
+  "underlineThickness": 0.05,
+  "boundingBox": {
+    "yMin": -0.21,
+    "xMin": 0,
+    "yMax": 0.9,
+    "xMax": 1
+  },
+  "resolution": 1000,
+  "original_font_information": {
+    "format": 0,
+    "copyright": "Copyright (c) 2010-2011 by tyPoland Lukasz Dziedzic with Reserved Font Name \"Lato\". Licensed under the SIL Open Font License, Version 1.1.",
+    "fontFamily": "Helvetiker",
+    "fontSubFamily": "Regular",
+    "uniqueID": "Helvetiker Regular",
+    "fullName": "Helvetiker",
+    "version": "Version 1.0",
+    "postScriptName": "Helvetiker-Regular",
+    "trademark": "",
+    "manufacturer": "",
+    "designer": "",
+    "description": "",
+    "manufacturerURL": "",
+    "designerURL": "",
+    "licence": "",
+    "licenceURL": ""
+  }
+}
