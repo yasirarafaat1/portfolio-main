@@ -107,14 +107,14 @@ const Hero = () => {
               size="lg"
               className="glass-card hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
-              Get In Touch
+              Hire Me
             </Button>
           </motion.div>
         </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 mt-5"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 0.8 }}
@@ -122,7 +122,7 @@ const Hero = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-foreground/60"
+            className="flex flex-col items-center text-foreground/60 mt-5"
           >
             <span className="text-sm mb-2">Scroll to explore</span>
             <ArrowDown className="h-5 w-5" />
