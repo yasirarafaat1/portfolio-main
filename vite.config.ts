@@ -5,8 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Use absolute URL for production, relative for development
-  base: mode === 'production' ? '/' : '/',
+  base: '/',
   
   server: {
     host: true,
@@ -25,24 +24,28 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    alias: [
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, 'src')
+      }
+    ]
   },
   
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     emptyOutDir: true,
-    sourcemap: mode === 'development',
+    sourcemap: mode !== 'production',
     chunkSizeWarningLimit: 1600,
-    
-    // Ensure proper chunking for better caching
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
     rollupOptions: {
       output: {
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('scheduler')) {
               return 'vendor_react';
             }
             if (id.includes('@radix-ui')) {
@@ -51,7 +54,6 @@ export default defineConfig(({ mode }) => ({
             return 'vendor';
           }
         },
-        // Ensure proper file names for better caching
         entryFileNames: 'assets/[name].[hash].js',
         chunkFileNames: 'assets/[name].[hash].js',
         assetFileNames: 'assets/[name].[hash][extname]',

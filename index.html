@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Yasir Arafaat Portfolio" />
+    <title>Yasir Arafaat Portfolio</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload React -->
+    <link rel="modulepreload" href="/node_modules/react/umd/react.production.min.js" as="script">
+    <link rel="modulepreload" href="/node_modules/react-dom/umd/react-dom.production.min.js" as="script">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yasir Arafaat Portfolio</title>
-</head>
-
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+  <body>
+    <div id="root"></div>
+    
+    <!-- Load React first -->
+    <script>
+      // Ensure React is loaded before the app starts
+      window.global = window;
+    </script>
+    
+    <!-- Load the app -->
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Add error boundary for better error handling -->
+    <script>
+      window.addEventListener('error', function(event) {
+        console.error('Uncaught error:', event.error);
+      });
+      
+      window.addEventListener('unhandledrejection', function(event) {
+        console.error('Unhandled promise rejection:', event.reason);
+      });
+    </script>
+  </body>
 </html>
