@@ -1,2 +1,2 @@
-# Vercel SPA fallback
-/* /index.html 200
+# Vercel SPA fallback - handle all routes with index.html
+/*    /index.html   200
