@@ -20,7 +20,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           react: ['react', 'react-dom', 'react-router-dom'],
-          vendor: ['@radix-ui/react-*'],
+          // Removed @radix-ui/react-* pattern as it causes build issues
         },
       },
     },
