@@ -49,7 +49,6 @@ try {
     db = getFirestore(app);
   }
 
-  console.log('Firebase initialized successfully');
 } catch (error) {
   console.error('Error initializing Firebase:', error);
   throw error; // Re-throw to prevent the app from starting with a broken Firebase config
