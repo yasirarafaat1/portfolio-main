@@ -4,18 +4,14 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
 
-// Import images
-import subhashImage from '/subhash.png';
-import glowInvoiceImage from '/glow-invoice.png';
-import portfolioImage from '/portfolio.png';
-import sspsImage from '/ssps.png';
+
 
 const projects = [
   {
     id: 1,
     title: 'Subhash Academy College Website',
     description: 'A college website with Next.js, ShadCn, Firebase, GitHub, and Vercel. Features include real-time inventory, payment processing, and admin dashboard.',
-    image: subhashImage,
+    image: '/subhash.png',
     tags: ['Next.js', 'Firebase', 'ShadCn', 'Vercel'],
     github: 'https://github.com/yasirarafaat1/subhash-academy',
     live: 'https://subhashacademy.co.in'
@@ -24,7 +20,7 @@ const projects = [
     id: 2,
     title: 'Glow Invoice Creator',
     description: 'Intelligent invoice crator app with mode toggling. Built with React.js,Tailwind, firebase, Vercel.',
-    image: glowInvoiceImage,
+    image: '/glow-invoice.png',
     tags: ['React.js', 'TypeScript', 'GitHub', 'Firebase','Vercel'],
     github: 'https://github.com/yasirarafaat1/glow-invoice',
     live: 'https://glow-invoice.vercel.app'
@@ -33,7 +29,7 @@ const projects = [
     id: 3,
     title: '3D Portfolio Site',
     description: 'Interactive 3D portfolio website with Three.js animations and immersive user experience. Showcases advanced web technologies.',
-    image: portfolioImage,
+    image: '/portfolio.png',
     tags: ['Three.js', 'React', 'Framer Motion', 'WebGL'],
     github: 'https://github.com/yasirarafaat1/portfolio',
     live: '/'
@@ -42,7 +38,7 @@ const projects = [
     id: 4,
     title: 'SS Public School Website',
     description: 'Modern school website with real-time updation of fees struture, gallery, staff members. Built with React.js, Bootstrap, Firebase, GitHub and Vercel',
-    image: sspsImage,
+    image: '/ssps.png',
     tags: ['React.js', 'Firebase', 'GitHub', 'Bootstrap'],
     github: 'https://github.com/yasirarafaat1/ss-publi-school',
     live: 'https://sspublicschool.vercel.app'

@@ -1,7 +1,7 @@
 import { motion, useInView, easeInOut } from 'framer-motion';
 import { useRef } from 'react';
 import { Card } from '@/components/ui/card';
-import profileImage from '/profile.jpeg';
+
 
 const About = () => {
   const ref = useRef(null);
@@ -57,7 +57,7 @@ const About = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-xl opacity-30"></div>
                   <img
-                    src={profileImage}
+                    src="/profile.jpeg"
                     alt="Profile"
                     className="relative w-full h-full object-cover rounded-full glass-card"
                   />
