@@ -1,4 +1,4 @@
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, easeInOut } from 'framer-motion';
 import { useRef } from 'react';
 import { Card } from '@/components/ui/card';
 
@@ -23,7 +23,7 @@ const About = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
+        ease: easeInOut
       }
     }
   };
@@ -70,10 +70,13 @@ const About = () => {
                   My Journey
                 </h3>
                 <p className="text-foreground/70 leading-relaxed">
-                  With over 5 years of experience in web development, I've worked with 
-                  startups and enterprise companies, building scalable applications that 
-                  serve millions of users. My passion lies in creating seamless user 
-                  experiences backed by robust, efficient code.
+                  Over the past 6 months, I've immersed myself in the world of web development, 
+                  transforming my passion into practical skills. My journey includes successfully 
+                  delivering a freelance project and building multiple personal projects that solve 
+                  real-world problems. I thrive in fast-paced environments where I can apply my 
+                  problem-solving skills and continuously learn new technologies. My hands-on 
+                  experience has given me valuable insights into the complete development lifecycle, 
+                  from concept to deployment.
                 </p>
               </Card>
 
@@ -89,10 +92,6 @@ const About = () => {
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
                     <span>Modern React & TypeScript development</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span>API design and database architecture</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>

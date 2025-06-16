@@ -1,4 +1,4 @@
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, easeInOut } from 'framer-motion';
 import { useRef } from 'react';
 import { Card } from '@/components/ui/card';
 
@@ -36,7 +36,7 @@ const Skills = () => {
       x: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: easeInOut
       }
     }
   };
