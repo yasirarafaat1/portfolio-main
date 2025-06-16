@@ -85,21 +85,17 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
+              variant="outline"
               size="lg"
-              className="glass-card text-primary hover:glow-effect hover:text-primary-foreground transition-all duration-300 group"
-              onClick={() => {
-                const workSection = document.getElementById('work');
-                if (workSection) {
-                  workSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-              }}
-            >
+              onClick={() => window.open('https://github.com/yasirarafaat1', '_blank')}
+              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-lg hover:shadow-primary/50 transform transition-all duration-300"
+              >
               <span>View My Work</span>
               <motion.div
                 className="ml-2"
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-              >
+                >
                   →
               </motion.div>
             </Button>
@@ -109,11 +105,11 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="no-underline"
-            >
+              >
               <Button
-                variant="outline"
+              variant="outline"
                 size="lg"
-                className="glass-card hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-lg hover:shadow-primary/50 transform transition-all duration-300"
               >
                 Hire Me
               </Button>
@@ -139,12 +135,12 @@ const Hero = () => {
                   }
                 }}
               >
-                <span className="text-sm text-foreground/60">Scroll to explore</span>
+                <span className="text-sm text-foreground/90">Scroll to explore</span>
                 <motion.div
                   animate={{ y: [0, 8, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
                 >
-                  <ArrowDown className="h-6 w-6 text-foreground/60" />
+                  <ArrowDown className="h-6 w-6 text-foreground/90" />
                 </motion.div>
               </Button>
             </div>

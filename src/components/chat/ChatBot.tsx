@@ -248,7 +248,7 @@ const ChatBot = () => {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 w-full max-w-md h-[600px] flex flex-col bg-background rounded-lg shadow-xl overflow-hidden z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-[calc(100%-2rem)] sm:w-full max-w-sm h-[70vh] max-h-[500px] sm:max-h-[600px] flex flex-col bg-background rounded-lg shadow-xl overflow-hidden z-50">
       <div className="bg-primary text-primary-foreground p-4 flex justify-between items-center">
         <h3 className="font-semibold">
           {isMockMode ? 'AI Assistant (Mock Mode)' : 'AI Assistant'}

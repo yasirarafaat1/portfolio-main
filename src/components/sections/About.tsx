@@ -59,14 +59,14 @@ const About = () => {
                   <img
                     src="/profile.jpeg"
                     alt="Profile"
-                    className="relative w-full h-full object-cover rounded-full glass-card"
+                    className="relative w-full h-full object-cover rounded-full border-2 border-primary/20"
                   />
                 </motion.div>
               </div>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
-              <Card className="glass-card p-6 hover:glow-effect transition-all duration-300">
+              <Card className="bg-card sm:glass-card border border-border p-6 hover:glow-effect transition-all duration-300">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">
                   My Journey
                 </h3>
@@ -81,7 +81,7 @@ const About = () => {
                 </p>
               </Card>
 
-              <Card className="glass-card p-6 hover:glow-effect transition-all duration-300">
+              <Card className="bg-card sm:glass-card border border-border p-6 hover:glow-effect transition-all duration-300">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">
                   What I Do
                 </h3>
@@ -101,7 +101,7 @@ const About = () => {
                 </div>
               </Card>
 
-              <Card className="glass-card p-6 hover:glow-effect transition-all duration-300">
+              <Card className="bg-card sm:glass-card border border-border p-6 hover:glow-effect transition-all duration-300">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">
                   Beyond Code
                 </h3>

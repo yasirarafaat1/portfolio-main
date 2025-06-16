@@ -31,7 +31,7 @@ const projects = [
     description: 'Interactive 3D portfolio website with Three.js animations and immersive user experience. Showcases advanced web technologies.',
     image: '/portfolio.png',
     tags: ['Three.js', 'React', 'Framer Motion', 'WebGL'],
-    github: 'https://github.com/yasirarafaat1/portfolio',
+    github: 'https://github.com/yasirarafaat1/portfolio-main',
     live: '/'
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     description: 'Modern school website with real-time updation of fees struture, gallery, staff members. Built with React.js, Bootstrap, Firebase, GitHub and Vercel',
     image: '/ssps.png',
     tags: ['React.js', 'Firebase', 'GitHub', 'Bootstrap'],
-    github: 'https://github.com/yasirarafaat1/ss-publi-school',
+    github: 'https://github.com/yasirarafaat1/ss-public-school',
     live: 'https://sspublicschool.vercel.app'
   },
 ];
@@ -103,7 +103,7 @@ const Projects = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="perspective-1000"
               >
-                <Card className="glass-card overflow-hidden group hover:glow-effect transition-all duration-500 transform-style-3d">
+                <Card className="bg-card sm:glass-card border border-border overflow-hidden group hover:glow-effect transition-all duration-500 transform-style-3d">
                   <div className="relative overflow-hidden">
                     <img
                       src={project.image}
@@ -143,7 +143,7 @@ const Projects = () => {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="glass-card hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                          className="hover:bg-[#6164eb] hover:border-[#6164eb] hover:text-primary-foreground transition-colors duration-300"
                           disabled={project.github === '#'}
                         >
                           <Github className="w-4 h-4 mr-2" />
@@ -158,8 +158,9 @@ const Projects = () => {
                         className={project.live === '#' ? 'opacity-50 cursor-not-allowed' : ''}
                       >
                         <Button
+                          variant="outline"
                           size="sm"
-                          className="glass-card hover:glow-effect transition-all duration-300"
+                          className="hover:bg-[#6164eb] hover:border-[#6164eb] hover:text-primary-foreground transition-colors duration-300"
                           disabled={project.live === '#'}
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />

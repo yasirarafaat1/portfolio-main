@@ -188,7 +188,7 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             <motion.div variants={itemVariants} className="space-y-6">
-              <Card className="glass-card p-6 hover:glow-effect transition-all duration-300">
+              <Card className="bg-card sm:glass-card p-6 hover:glow-effect transition-all duration-300">
                 <h3 className="text-2xl font-semibold mb-6 text-primary">
                   Let's Connect
                 </h3>
@@ -229,7 +229,7 @@ const Contact = () => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="glass-card p-6 hover:glow-effect transition-all duration-300">
+              <Card className="bg-card sm:glass-card p-6 hover:glow-effect transition-all duration-300">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Input
@@ -238,7 +238,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="glass-card border-0 focus:ring-2 focus:ring-primary"
+                      className="bg-background/50 border focus:ring-2 focus:ring-primary"
                     />
                     {formErrors.name && <p className="text-red-500">{formErrors.name}</p>}
                   </div>
@@ -250,7 +250,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="glass-card border-0 focus:ring-2 focus:ring-primary"
+                      className="bg-background/50 border focus:ring-2 focus:ring-primary"
                     />
                     {formErrors.email && <p className="text-red-500">{formErrors.email}</p>}
                   </div>
@@ -262,14 +262,14 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="glass-card border-0 focus:ring-2 focus:ring-primary resize-none"
+                      className="bg-background/50 border focus:ring-2 focus:ring-primary resize-none"
                     />
                     {formErrors.message && <p className="text-red-500">{formErrors.message}</p>}
                   </div>
                   <Button 
                     type="submit" 
                     disabled={isSubmitting} 
-                    className="w-full glass-card hover:glow-effect transition-all duration-300"
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
                     size="lg"
                   >
                     {isSubmitting ? (

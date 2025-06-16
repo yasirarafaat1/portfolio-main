@@ -66,7 +66,7 @@ const Skills = () => {
                 variants={itemVariants}
                 custom={index}
               >
-                <Card className="glass-card p-6 hover:glow-effect transition-all duration-300">
+                <Card className="bg-card sm:glass-card border border-border p-6 hover:glow-effect transition-all duration-300">
                   <div className="flex justify-between items-center mb-3">
                     <span className="font-semibold text-lg">{skill.name}</span>
                     <span className="text-accent font-medium">{skill.level}%</span>
