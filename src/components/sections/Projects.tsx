@@ -79,7 +79,7 @@ const Projects = () => {
           ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          animate={isInView ? "visible" : "hidden"}
         >
           <motion.div variants={cardVariants} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
