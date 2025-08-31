@@ -8,7 +8,6 @@ import Skills from '@/components/sections/Skills';
 import Projects from '@/components/sections/Projects';
 import Resume from '@/components/sections/Resume';
 import Contact from '@/components/sections/Contact';
-import ChatBot from '@/components/chat/ChatBot';
 
 const Index = () => {
   return (
@@ -33,9 +32,6 @@ const Index = () => {
             </p>
           </div>
         </footer>
-
-        {/* AI ChatBot */}
-        <ChatBot />
       </div>
     </ThemeProvider>
   );

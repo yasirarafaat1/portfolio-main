@@ -21,6 +21,10 @@ const MOCK_RESPONSES = [
   "I'm currently in mock mode. Set VITE_MOCK_MODE=false to use the real AI service."
 ];
 
+// Use the correct Gemini endpoint and model
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent';
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>(() => {
@@ -34,7 +38,7 @@ const ChatBot = () => {
       },
     ];
   });
-  
+
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isRateLimited, setIsRateLimited] = useState(false);
@@ -44,7 +48,8 @@ const ChatBot = () => {
   const isMounted = useRef(true);
 
   // Check if we're in mock mode
-  const isMockMode = import.meta.env.VITE_MOCK_MODE === 'true';
+  // const isMockMode = import.meta.env.VITE_MOCK_MODE === 'true';
+  const isMockMode = false; // Force real API for testing
   const MOCK_DELAY = 500; // ms
 
   // Save messages to localStorage whenever they change
@@ -73,7 +78,7 @@ const ChatBot = () => {
           setRetryAfter(null);
         }
       }, retryAfter * 1000);
-      
+
       return () => {
         if (retryTimerRef.current) {
           clearTimeout(retryTimerRef.current);
@@ -85,10 +90,23 @@ const ChatBot = () => {
   const generateMockResponse = useCallback(async (userMessage: string): Promise<string> => {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, MOCK_DELAY));
-    
+
     // Return a random mock response
     return MOCK_RESPONSES[Math.floor(Math.random() * MOCK_RESPONSES.length)];
   }, []);
+
+  const fetchWithRetry = async (fetchFn: () => Promise<Response>, retries = 2, backoff = 2000): Promise<Response> => {
+    let lastError: Response | undefined;
+    for (let i = 0; i <= retries; i++) {
+      const res = await fetchFn();
+      if (res.status !== 429) return res;
+      lastError = res;
+      // Wait for 'retry-after' header or backoff
+      const retryAfter = parseInt(res.headers.get('Retry-After') || '2', 10);
+      await new Promise(resolve => setTimeout(resolve, retryAfter * 1000 || backoff * (i + 1)));
+    }
+    throw lastError;
+  };
 
   const sendMessage = useCallback(async () => {
     if (!inputMessage.trim() || isLoading || isRateLimited) return;
@@ -106,49 +124,20 @@ const ChatBot = () => {
 
     try {
       let aiResponse: string;
-      
+
       if (isMockMode) {
-        // Use mock response
         aiResponse = await generateMockResponse(inputMessage);
       } else {
-        // Real API call
-        const now = Date.now();
-        const timeSinceLastRequest = now - lastRequestTime.current;
-        const minDelay = 1000; // 1 second minimum between requests
-        
-        // Enforce rate limiting
-        if (timeSinceLastRequest < minDelay) {
-          await new Promise(resolve => setTimeout(resolve, minDelay - timeSinceLastRequest));
-        }
-        
-        lastRequestTime.current = Date.now();
-        
-        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        // --- Gemini API call ---
+        const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            model: 'gpt-3.5-turbo',
-            messages: [
-              {
-                role: 'system',
-                content: 'You are a helpful AI assistant for Yasir, a software developer. You can answer questions about his skills, experience, and projects.'
-              },
-              ...messages
-                .filter(m => !m.isUser)
-                .map(m => ({
-                  role: 'assistant' as const,
-                  content: m.text
-                })),
-              {
-                role: 'user',
-                content: inputMessage
-              }
-            ],
-            max_tokens: 300,
-            temperature: 0.7
+            contents: [
+              { parts: [{ text: inputMessage }] }
+            ]
           })
         });
 
@@ -156,24 +145,20 @@ const ChatBot = () => {
           const retryAfter = parseInt(response.headers.get('Retry-After') || '60', 10);
           setIsRateLimited(true);
           setRetryAfter(retryAfter);
-          
-          // Auto-retry after delay
-          setTimeout(() => {
-            if (isMounted.current) {
-              setIsRateLimited(false);
-              setRetryAfter(null);
-            }
-          }, retryAfter * 1000);
-          
+          toast({
+            title: 'Rate Limited',
+            description: `You are sending messages too quickly. Please wait ${retryAfter} seconds before trying again.`,
+            variant: 'destructive',
+          });
           throw new Error(`Rate limited. Please try again in ${retryAfter} seconds.`);
         }
 
         if (!response.ok) {
-          throw new Error('Failed to get response from AI');
+          throw new Error('Failed to get response from Gemini');
         }
 
         const data = await response.json();
-        aiResponse = data.choices[0]?.message?.content || "I'm sorry, I couldn't process that request.";
+        aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || "I'm sorry, I couldn't process that request.";
       }
 
       const aiMessage: Message = {
@@ -186,16 +171,12 @@ const ChatBot = () => {
       setMessages(prev => [...prev, aiMessage]);
     } catch (error) {
       console.error('Error sending message:', error);
-      
+
       let errorMessage = 'Failed to get response from AI. ';
-      
+
       if (isRateLimited && retryAfter !== null) {
         errorMessage = `Rate limited. Please wait ${retryAfter} seconds before trying again.`;
-        toast({
-          title: 'Rate Limited',
-          description: errorMessage,
-          variant: 'destructive',
-        });
+        // toast already shown above
       } else if (!isMockMode) {
         errorMessage += 'Please try again later.';
         toast({
@@ -203,7 +184,7 @@ const ChatBot = () => {
           description: errorMessage,
           variant: 'destructive',
         });
-        
+
         const errorMessageObj: Message = {
           id: (Date.now() + 1).toString(),
           text: "Sorry, I'm having trouble responding right now. Please try again later.",
@@ -268,12 +249,11 @@ const ChatBot = () => {
             key={message.id}
             className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}
           >
-            <div 
-              className={`max-w-[80%] rounded-lg px-4 py-2 break-words ${
-                message.isUser
-                  ? 'bg-primary text-primary-foreground rounded-br-none'
-                  : 'bg-muted text-foreground rounded-bl-none'
-              }`}
+            <div
+              className={`max-w-[80%] rounded-lg px-4 py-2 break-words ${message.isUser
+                ? 'bg-primary text-primary-foreground rounded-br-none'
+                : 'bg-muted text-foreground rounded-bl-none'
+                }`}
             >
               <p className="text-sm">{message.text}</p>
               <p className="text-xs opacity-70 mt-1 text-right">
@@ -306,9 +286,11 @@ const ChatBot = () => {
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder={
-              isMockMode 
-                ? 'Mock mode enabled - type a message...' 
-                : 'Type your message...'
+              isRateLimited
+                ? `Rate limited. Please wait ${retryAfter ?? ''} seconds...`
+                : isMockMode
+                  ? 'Mock mode enabled - type a message...'
+                  : 'Type your message...'
             }
             className="flex-1"
             disabled={isLoading || isRateLimited}
@@ -328,6 +310,11 @@ const ChatBot = () => {
         {isMockMode && (
           <p className="text-xs text-muted-foreground mt-2 text-center">
             Running in mock mode. Set VITE_MOCK_MODE=false in .env to use the real AI.
+          </p>
+        )}
+        {isRateLimited && (
+          <p className="text-xs text-destructive mt-2 text-center">
+            You are being rate limited. Please wait {retryAfter ?? ''} seconds before sending another message.
           </p>
         )}
       </div>
