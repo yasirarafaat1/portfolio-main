@@ -12,7 +12,7 @@ const projects = [
     title: 'Subhash Academy College Website',
     description: 'A college website with Next.js, ShadCn, Firebase, GitHub, and Vercel. Features include real-time inventory, payment processing, and admin dashboard.',
     image: '/subhash.png',
-    tags: ['Next.js', 'Firebase', 'ShadCn', 'Vercel'],
+    tags: ['Next.js', 'Firebase', 'Vercel'],
     github: 'https://github.com/yasirarafaat1/subhash-academy',
     live: 'https://subhashacademy.co.in'
   },
@@ -27,21 +27,21 @@ const projects = [
   },
   {
     id: 3,
-    title: '3D Portfolio Site',
+    title: 'E-Commerce: Kiswah Makkah Store',
     description: 'Interactive 3D portfolio website with Three.js animations and immersive user experience. Showcases advanced web technologies.',
-    image: '/portfolio.png',
-    tags: ['Three.js', 'React', 'Framer Motion', 'WebGL'],
-    github: 'https://github.com/yasirarafaat1/portfolio-main',
-    live: '/'
+    image: '/kiswah.png',
+    tags: ['React', 'Node', 'Supabase', 'Vercel'],
+    github: 'https://github.com/faizansiddqui/islamicDecotWeb',
+    live: 'https://kiswahmakkahstore.com/'
   },
   {
     id: 4,
     title: 'SS Public School Website',
     description: 'Modern school website with real-time updation of fees struture, gallery, staff members. Built with React.js, Bootstrap, Firebase, GitHub and Vercel',
     image: '/ssps.png',
-    tags: ['React.js', 'Firebase', 'GitHub', 'Bootstrap'],
+    tags: ['React.js', 'Firebase', 'GitHub', 'Bootstrap', 'Vercel'],
     github: 'https://github.com/yasirarafaat1/ss-public-school',
-    live: 'https://sspublicschool.vercel.app'
+    live: 'https://schooldemo.akamify.com'
   },
 ];
 

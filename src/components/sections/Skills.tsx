@@ -3,14 +3,17 @@ import { useRef } from 'react';
 import { Card } from '@/components/ui/card';
 
 const skills = [
+  { name: 'HTML', level: 95, category: 'Language' },
+  { name: 'CSS', level: 95, category: 'Css' },
+  { name: 'Java Script', level: 95, category: 'Language' },
+  { name: 'TypeScript', level: 90, category: 'Language' },
   { name: 'React/Next.js', level: 95, category: 'Frontend' },
-  { name: 'TypeScript', level: 90, category: 'Frontend' },
-  { name: 'Bootstrap', level: 82, category: 'Library' },
   { name: 'Node.js', level: 88, category: 'Backend' },
+  { name: 'Bootstrap', level: 82, category: 'Components Library' },
   { name: 'GitHub', level: 85, category: 'Version Control' },
-  { name: 'ShadCn', level: 80, category: 'Library' },
   { name: 'Vercel', level: 75, category: 'Deployment' },
-  { name: 'Firebase', level: 78, category: 'Firebase' },
+  { name: 'Firebase', level: 78, category: 'Database' },
+  { name: 'Supabase', level: 80, category: 'Database' },
 ];
 
 const categories = ['All', 'Frontend', 'Backend', 'Database', 'DevOps'];
