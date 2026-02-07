@@ -14,6 +14,7 @@ const skills = [
   { name: 'Vercel', level: 75, category: 'Deployment' },
   { name: 'Firebase', level: 78, category: 'Database' },
   { name: 'Supabase', level: 80, category: 'Database' },
+  { name: 'AiSensy', level: 90, category: 'WhatsApp Marketing' },
 ];
 
 const categories = ['All', 'Frontend', 'Backend', 'Database', 'DevOps'];

@@ -13,6 +13,7 @@ import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { app } from "@/firebase/config";
 import { supabase } from "./integrations/supabase/client";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const AppContent = () => (
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>
+    <WhatsAppButton phoneNumber="7905325078" />
   </>
 );
 
