@@ -31,17 +31,26 @@ const projects = [
     description: 'Interactive 3D portfolio website with Three.js animations and immersive user experience. Showcases advanced web technologies.',
     image: '/kiswah.png',
     tags: ['React', 'Node', 'Supabase', 'Vercel'],
-    github: 'https://github.com/faizansiddqui/islamicDecotWeb',
-    live: 'https://kiswahmakkahstore.com/'
+    github: 'https://github.com/faizansiddqui/zaidEcommerceFrontend03-12.git',
+    live: 'https://kiswahmakkahstore.com'
   },
   {
     id: 4,
     title: 'SS Public School Website',
-    description: 'Modern school website with real-time updation of fees struture, gallery, staff members. Built with React.js, Bootstrap, Firebase, GitHub and Vercel',
+    description: 'Modern school website with real-time updation of fees struture, gallery, staff members.',
     image: '/ssps.png',
     tags: ['React.js', 'Firebase', 'GitHub', 'Bootstrap', 'Vercel'],
     github: 'https://github.com/yasirarafaat1/ss-public-school',
     live: 'https://schooldemo.akamify.com'
+  },
+   {
+    id: 5,
+    title: 'Mahabali Price Action Portfolio',
+    description: 'Price Action Portfolio website with form submission functioanlty AiSensy integration with reminder compaigns.',
+    image: '/mahabali.png',
+    tags: ['React.js', 'Node.js', 'Google Sheets', 'AiSensy', 'QStash', 'GitHub', 'Vercel'],
+    github: 'https://github.com/faizansiddqui/tradinglandingpagebyrahulsir.git',
+    live: 'https://mahabalipriceaction.com'
   },
 ];
 
@@ -83,7 +92,7 @@ const Projects = () => {
         >
           <motion.div variants={cardVariants} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-              Featured Projects
+              My Portfolio
             </h2>
             <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
               A showcase of my recent work and personal projects
