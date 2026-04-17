@@ -21,7 +21,7 @@ const Index = () => {
           <Skills />
           <Projects />
           <Resume />
-          <Contact />
+          {/* <Contact /> */}
         </main>
         
         {/* Footer */}

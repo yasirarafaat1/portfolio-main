@@ -9,12 +9,15 @@ const skills = [
   { name: 'TypeScript', level: 90, category: 'Language' },
   { name: 'React/Next.js', level: 95, category: 'Frontend' },
   { name: 'Node.js', level: 88, category: 'Backend' },
-  { name: 'Bootstrap', level: 82, category: 'Components Library' },
   { name: 'GitHub', level: 85, category: 'Version Control' },
   { name: 'Vercel', level: 75, category: 'Deployment' },
+  { name: 'MongoDB', level: 78, category: 'Database' },
   { name: 'Firebase', level: 78, category: 'Database' },
   { name: 'Supabase', level: 80, category: 'Database' },
+  { name: 'Cloudinary', level: 80, category: 'Files Storage' },
+  { name: 'Bootstrap', level: 82, category: 'Components Library' },
   { name: 'AiSensy', level: 90, category: 'WhatsApp Marketing' },
+  { name: 'Mart2Meta', level: 90, category: 'WhatsApp Marketing' },
 ];
 
 const categories = ['All', 'Frontend', 'Backend', 'Database', 'DevOps'];
