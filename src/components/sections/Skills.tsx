@@ -16,8 +16,7 @@ const skills = [
   { name: 'Supabase', level: 80, category: 'Database' },
   { name: 'Cloudinary', level: 80, category: 'Files Storage' },
   { name: 'Bootstrap', level: 82, category: 'Components Library' },
-  { name: 'AiSensy', level: 90, category: 'WhatsApp Marketing' },
-  { name: 'Mart2Meta', level: 90, category: 'WhatsApp Marketing' },
+  { name: 'WhatsApp Business API', level: 90, category: 'WhatsApp Marketing' },
 ];
 
 const categories = ['All', 'Frontend', 'Backend', 'Database', 'DevOps'];

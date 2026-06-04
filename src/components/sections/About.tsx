@@ -68,48 +68,39 @@ const About = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <Card className="bg-card sm:glass-card border border-border p-6 hover:glow-effect transition-all duration-300">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">
-                  My Journey
+                  What I've Built
                 </h3>
                 <p className="text-foreground/70 leading-relaxed">
-                  Over the past 6 months, I've immersed myself in the world of web development, 
-                  transforming my passion into practical skills. My journey includes successfully 
-                  delivering a freelance project and building multiple personal projects that solve 
-                  real-world problems. I thrive in fast-paced environments where I can apply my 
-                  problem-solving skills and continuously learn new technologies. My hands-on 
-                  experience has given me valuable insights into the complete development lifecycle, 
-                  from concept to deployment.
+                  I'm currently working at Akamify where I develop full-stack solutions. I've built multiple real-world projects including freelance work and personal applications. My experience spans the complete development cycle - from designing interfaces to deploying production applications. I focus on clean code, performance, and creating applications that actually solve user problems.
                 </p>
               </Card>
 
               <Card className="bg-card sm:glass-card border border-border p-6 hover:glow-effect transition-all duration-300">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">
-                  What I Do
+                  My Skills
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span>Full-stack web application development</span>
+                    <span>React, TypeScript, Node.js</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span>Modern React & TypeScript development</span>
+                    <span>Full-stack development & deployment</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span>UI/UX design and prototyping</span>
+                    <span>Database design & API development</span>
                   </div>
                 </div>
               </Card>
 
               <Card className="bg-card sm:glass-card border border-border p-6 hover:glow-effect transition-all duration-300">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">
-                  Beyond Code
+                  My Goal
                 </h3>
                 <p className="text-foreground/70 leading-relaxed">
-                  When I'm not coding, you'll find me exploring new technologies, 
-                  contributing to open source projects, or enjoying outdoor adventures. 
-                  I believe in continuous learning and staying updated with the latest 
-                  industry trends.
+                  I'm passionate about creating apps that are fast, intuitive, and solve real problems. I love learning new technologies and staying updated with industry trends. Every project is an opportunity to improve my skills and deliver quality solutions.
                 </p>
               </Card>
             </motion.div>
