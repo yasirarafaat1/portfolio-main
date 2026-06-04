@@ -96,20 +96,20 @@ const Hero = () => {
               size="lg"
               onClick={() => window.open('https://github.com/yasirarafaat1', '_blank')}
               className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-lg hover:shadow-primary/50 transform transition-all duration-300"
-              >
+            >
               <span>View My Work</span>
               <motion.div
                 className="ml-2"
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  →
+              >
+                →
               </motion.div>
             </Button>
           </motion.div>
 
           {/* Scroll to Explore Button - Below action buttons */}
-          <motion.div 
+          <motion.div
             className="w-full mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
