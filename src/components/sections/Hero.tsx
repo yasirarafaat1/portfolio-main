@@ -63,13 +63,6 @@ const Hero = () => {
             className="text-2xl md:text-3xl lg:text-4xl text-foreground/80 mb-8"
           >
             <span>Full Stack Developer</span>
-            <motion.span
-              className="inline-block ml-2"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            >
-              ⚡
-            </motion.span>
           </motion.div>
 
           <motion.div

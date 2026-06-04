@@ -28,7 +28,7 @@ const Index = () => {
         <footer className="py-8 text-center border-t border-border/50">
           <div className="container mx-auto px-6">
             <p className="text-foreground/60">
-              © 2025 Yasir Arafaat. Built with React, Three.js & Framer Motion.
+              © 2025 Yasir Arafaat
             </p>
           </div>
         </footer>
