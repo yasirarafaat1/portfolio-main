@@ -72,6 +72,13 @@ const Hero = () => {
             </motion.span>
           </motion.div>
 
+          <motion.div
+            variants={itemVariants}
+            className="text-lg md:text-xl text-accent/80 mb-8 font-medium"
+          >
+            <span>Working at Akamify</span>
+          </motion.div>
+
           <motion.p
             variants={itemVariants}
             className="text-lg md:text-xl text-foreground/60 mb-12 max-w-2xl mx-auto leading-relaxed"
