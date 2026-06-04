@@ -76,7 +76,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-lg md:text-xl text-accent/80 mb-8 font-medium"
           >
-            <span>Working at Akamify</span>
+            <span>Worked with Akamify</span>
           </motion.div>
 
           <motion.p

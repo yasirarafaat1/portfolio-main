@@ -71,7 +71,7 @@ const About = () => {
                   What I've Built
                 </h3>
                 <p className="text-foreground/70 leading-relaxed">
-                  I'm currently working at Akamify where I develop full-stack solutions. I've built multiple real-world projects including freelance work and personal applications. My experience spans the complete development cycle - from designing interfaces to deploying production applications. I focus on clean code, performance, and creating applications that actually solve user problems.
+                  I'm currently worked with Akamify where I develop full-stack solutions. I've built multiple real-world projects including freelance work and personal applications. My experience spans the complete development cycle - from designing interfaces to deploying production applications. I focus on clean code, performance, and creating applications that actually solve user problems.
                 </p>
               </Card>
 
