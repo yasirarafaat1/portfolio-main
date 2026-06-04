@@ -99,21 +99,6 @@ const Hero = () => {
                   →
               </motion.div>
             </Button>
-
-            <a 
-              href="https://wa.me/917905325078?text=Hi%20Yasir%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.%20" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="no-underline"
-              >
-              <Button
-              variant="outline"
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-lg hover:shadow-primary/50 transform transition-all duration-300"
-              >
-                Hire Me
-              </Button>
-            </a>
           </motion.div>
 
           {/* Scroll to Explore Button - Below action buttons */}
