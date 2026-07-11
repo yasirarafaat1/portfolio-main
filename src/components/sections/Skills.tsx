@@ -7,16 +7,20 @@ const skills = [
   { name: 'CSS', level: 95, category: 'Css' },
   { name: 'Java Script', level: 95, category: 'Language' },
   { name: 'TypeScript', level: 90, category: 'Language' },
-  { name: 'React/Next.js', level: 95, category: 'Frontend' },
+  { name: 'React.js/Next.js', level: 95, category: 'Frontend' },
   { name: 'Node.js', level: 88, category: 'Backend' },
   { name: 'GitHub', level: 85, category: 'Version Control' },
-  { name: 'Vercel', level: 75, category: 'Deployment' },
+  { name: 'Vercel', level: 80, category: 'Deployment' },
+  { name: 'Render', level: 75, category: 'Deployment' },
+  { name: 'Railway', level: 75, category: 'Deployment' },
+  { name: 'VPS', level: 70, category: 'Deployment' },
   { name: 'MongoDB', level: 78, category: 'Database' },
+  { name: 'MySQL', level: 70, category: 'Database' },
   { name: 'Firebase', level: 78, category: 'Database' },
   { name: 'Supabase', level: 80, category: 'Database' },
   { name: 'Cloudinary', level: 80, category: 'Files Storage' },
   { name: 'Bootstrap', level: 82, category: 'Components Library' },
-  { name: 'WhatsApp Business API', level: 90, category: 'WhatsApp Marketing' },
+  { name: 'Meta Graph APIs', level: 80, category: 'APIs' },
 ];
 
 const categories = ['All', 'Frontend', 'Backend', 'Database', 'DevOps'];

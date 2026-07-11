@@ -8,12 +8,27 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
+    id: 5,
+    title: 'Mahabali Price Action Portfolio',
+    description: 'Price Action Landing Page with form submission functionality with WhatsApp Business API integration with reminder template messages through Qstash.',
+    image: '/mahabali.png',
+    tags: ['React.js', 'Node.js', 'Razorpay', 'Brevo', 'Google Sheets API', 'WhatsApp Business API', 'QStash'],
+    live: 'https://mahabalipriceaction.com'
+  },
+  {
+    id: 7,
+    title: 'Digital AdBird CRM',
+    description: 'CRM for managing leads, users, teams, partner requests, follow-ups, and performance reports with automated lead assignment, scheduled distribution, call tracking, notifications, and real-time updates using Socket.IO. Integrated Meta lead syncing, WhatsApp chat, Google Sheets synchronization, and secureJWT authentication.',
+    image: '/crm.png',
+    tags: ['Next.js', 'Node.js', 'Meta Graph APIs', 'Google Sheet API', 'Brevo', 'Virtual Private Server (VPS)', 'MySQL'],
+    live: 'https://crm.digitaladbird.com'
+  },
+  {
     id: 1,
     title: 'Apex Thrill | E-commerce',
     description: 'A full-stack e-commerce platform with real-time inventory, secure payments, and a scalable admin dashboard.',
     image: '/www.apexthrill.com.png',
     tags: ['Next.js', 'Node.js', 'MogoDB', 'Cloudinary', 'Brevo', 'Razorpay', 'Shiprocket'],
-    github: 'https://github.com/yasirarafaat1/street-riot',
     live: 'https://www.apexthrill.com'
   },
   {
@@ -22,7 +37,6 @@ const projects = [
     description: 'A scalable e-commerce application offering smooth user experience, integrated payments, and robust product management.',
     image: '/amilagold.png',
     tags: ['Next.js', 'Node.js', 'MogoDB', 'Cloudinary', 'Brevo', 'Razorpay'],
-    github: 'https://github.com/faizansiddqui/jaggery-frontend',
     live: 'https://jaggery-frontend-drab.vercel.app/'
   },
   {
@@ -31,53 +45,30 @@ const projects = [
     description: 'A college website with Next.js, ShadCn, Firebase, GitHub, and Vercel. Features include real-time inventory, payment processing, and admin dashboard.',
     image: '/subhash.png',
     tags: ['Next.js', 'Node.js', 'Firebase'],
-    github: 'https://github.com/yasirarafaat1/subhash-academy',
     live: 'https://subhashacademy.co.in'
   },
   {
     id: 4,
     title: 'Glow Invoice Creator',
-    description: 'Intelligent invoice crator app with mode toggling. Built with React.js,Tailwind, firebase, Vercel.',
+    description: 'Intelligent invoice crator app with mode toggling. Built with React.js, Tailwind, Firebase, and Vercel.',
     image: '/glow-invoice.png',
-    tags: ['React.js', 'TypeScript', 'Firebase'],
-    github: 'https://github.com/yasirarafaat1/glow-invoice',
+    tags: ['React.js', 'Node.js', 'Firebase'],
     live: 'https://glow-invoice.vercel.app'
   },
   {
-    id: 5,
-    title: 'Mahabali Price Action Portfolio',
-    description: 'Price Action Portfolio website with form submission functioanlty AiSensy integration with reminder compaigns.',
-    image: '/mahabali.png',
-    tags: ['React.js', 'Node.js', 'Google Sheets', 'Mart2Meta', 'QStash'],
-    github: 'https://github.com/faizansiddqui/mahabali-trading',
-    live: 'https://mahabalipriceaction.com'
-  },
-  {
     id: 6,
-    title: 'E-Commerce: Kiswah Makkah Store',
-    description: 'Interactive 3D portfolio website with Three.js animations and immersive user experience. Showcases advanced web technologies.',
-    image: '/kiswah.png',
-    tags: ['React.js', 'Nodes.j', 'Supabase'],
-    github: 'https://github.com/faizansiddqui/zaidEcommerceFrontend03-12.git',
-    live: 'https://kiswahmakkahstore.com'
-  },
-  {
-    id: 7,
     title: 'SS Public School Website',
     description: 'Modern school website with real-time updation of fees struture, gallery, staff members.',
     image: '/ssps.png',
     tags: ['React.js', 'Firebase', 'GitHub', 'Bootstrap'],
-    github: 'https://github.com/yasirarafaat1/ss-public-school',
     live: 'https://schooldemo.akamify.com'
   },
-
   {
     id: 8,
     title: 'Parenting Guide | Landing Paage',
-    description: 'A parenting-focused landing page with lead capture and WhatsApp integration',
+    description: 'A parenting-focused landing page with lead capture and WhatsApp Business API integration with messages scheduling using Qstash.',
     image: '/parentingguide.com.png',
-    tags: ['Next.js', 'Node.js', 'GoogleSheet', 'Aisensy'],
-    github: 'https://github.com/faizansiddqui/parenting-guide',
+    tags: ['Next.js', 'Node.js', 'Google Sheet API', 'WhatsApp Business API', 'Vercel'],
     live: 'https://parentingguide.com'
   },
 ];
@@ -170,23 +161,6 @@ const Projects = () => {
                     </div>
 
                     <div className="flex gap-3">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => project.github === '#' && e.preventDefault()}
-                        className={project.github === '#' ? 'opacity-50 cursor-not-allowed' : ''}
-                      >
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="hover:bg-[#6164eb] hover:border-[#6164eb] hover:text-primary-foreground transition-colors duration-300"
-                          disabled={project.github === '#'}
-                        >
-                          <Github className="w-4 h-4 mr-2" />
-                          Code
-                        </Button>
-                      </a>
                       <a
                         href={project.live}
                         target="_blank"
