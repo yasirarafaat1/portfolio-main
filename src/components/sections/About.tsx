@@ -49,7 +49,7 @@ const About = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants}>
-              <div className="relative">
+              <div className="lg:sticky top-2 relative">
                 <motion.div
                   className="w-80 h-80 mx-auto relative"
                   whileHover={{ scale: 1.05 }}
@@ -82,11 +82,11 @@ const About = () => {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span>React, TypeScript, Node.js</span>
+                    <span>React.js, TypeScript, Node.js</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span>Full-stack development & deployment</span>
+                    <span>Full-stack Development & Deployment</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>

@@ -24,6 +24,14 @@ const projects = [
     live: 'https://crm.digitaladbird.com'
   },
   {
+    id: 7,
+    title: 'Pure Fire E-Commerce Store',
+    description: 'A full-stack e-commerce store with real-time inventory with connected google sheets, real time instagram reels fetch using meta graph api, secure payments, and a scalable admin dashboard.',
+    image: '/pure-fire.png',
+    tags: ['Next.js', 'Node.js', 'Gemini API(Chat Bot)', 'Meta Graph API', 'Google Sheet API', 'Brevo', 'Cloudinary', 'Razorpay', 'MongoDb', 'Vercel'],
+    live: 'https://pure-fire.vercel.app'
+  },
+  {
     id: 1,
     title: 'Apex Thrill | E-commerce',
     description: 'A full-stack e-commerce platform with real-time inventory, secure payments, and a scalable admin dashboard.',
