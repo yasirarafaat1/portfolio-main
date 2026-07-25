@@ -9,6 +9,14 @@ import { ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     id: 5,
+    title: 'Ai Wiz Chat - Ai Powered WhatsApp Marketing Platform',
+    description: 'Designed, developed, and deployed full-stack web applications for clients using Next.js, Node.js, PostgreSQL, MongoDB, and modern frontend technologies.',
+    image: '/aiwizchat.png',
+    tags: ['React.js', 'Node.js', 'Razorpay', 'Brevo', 'Meta Graph API', 'Redis', 'BullMQ', 'MongoDB', 'Virtual Private Server (VPS)'],
+    live: 'https://www.aiwizchat.com'
+  },
+  {
+    id: 5,
     title: 'Mahabali Price Action Portfolio',
     description: 'Price Action Landing Page with form submission functionality with WhatsApp Business API integration with reminder template messages through Qstash.',
     image: '/mahabali.png',
@@ -20,12 +28,12 @@ const projects = [
     title: 'Digital AdBird CRM',
     description: 'CRM for managing leads, users, teams, partner requests, follow-ups, and performance reports with automated lead assignment, scheduled distribution, call tracking, notifications, and real-time updates using Socket.IO. Integrated Meta lead syncing, WhatsApp chat, Google Sheets synchronization, and secureJWT authentication.',
     image: '/crm.png',
-    tags: ['Next.js', 'Node.js', 'Meta Graph APIs', 'Google Sheet API', 'Brevo', 'Virtual Private Server (VPS)', 'MySQL'],
+    tags: ['Next.js', 'Node.js', 'Meta Graph APIs', 'Google Sheet API', 'Brevo', 'PostgreSQL', 'Virtual Private Server (VPS)'],
     live: 'https://crm.digitaladbird.com'
   },
   {
     id: 7,
-    title: 'Pure Fire E-Commerce Store',
+    title: 'Pure Fire | E-Commerce Store',
     description: 'A full-stack e-commerce store with real-time inventory with connected google sheets, real time instagram reels fetch using meta graph api, secure payments, and a scalable admin dashboard.',
     image: '/pure-fire.png',
     tags: ['Next.js', 'Node.js', 'Gemini API(Chat Bot)', 'Meta Graph API', 'Google Sheet API', 'Brevo', 'Cloudinary', 'Razorpay', 'MongoDb', 'Vercel'],
@@ -33,7 +41,7 @@ const projects = [
   },
   {
     id: 1,
-    title: 'Apex Thrill | E-commerce',
+    title: 'Apex Thrill | E-commerce Store',
     description: 'A full-stack e-commerce platform with real-time inventory, secure payments, and a scalable admin dashboard.',
     image: '/www.apexthrill.com.png',
     tags: ['Next.js', 'Node.js', 'MogoDB', 'Cloudinary', 'Brevo', 'Razorpay', 'Shiprocket'],
@@ -41,7 +49,7 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Amila Gold | E-commerce',
+    title: 'Amila Gold | E-commerce Store',
     description: 'A scalable e-commerce application offering smooth user experience, integrated payments, and robust product management.',
     image: '/amilagold.png',
     tags: ['Next.js', 'Node.js', 'MogoDB', 'Cloudinary', 'Brevo', 'Razorpay'],
@@ -54,6 +62,14 @@ const projects = [
     image: '/subhash.png',
     tags: ['Next.js', 'Node.js', 'Firebase'],
     live: 'https://subhashacademy.co.in'
+  },
+  {
+    id: 8,
+    title: 'Parenting Guide | Landing Page',
+    description: 'A parenting-focused landing page with lead capture and WhatsApp Business API integration with messages scheduling using Qstash.',
+    image: '/parentingguide.com.png',
+    tags: ['Next.js', 'Node.js', 'Google Sheet API', 'WhatsApp Business API', 'Vercel'],
+    live: 'https://parentingguide.com'
   },
   {
     id: 4,
@@ -70,14 +86,6 @@ const projects = [
     image: '/ssps.png',
     tags: ['React.js', 'Firebase', 'GitHub', 'Bootstrap'],
     live: 'https://schooldemo.akamify.com'
-  },
-  {
-    id: 8,
-    title: 'Parenting Guide | Landing Paage',
-    description: 'A parenting-focused landing page with lead capture and WhatsApp Business API integration with messages scheduling using Qstash.',
-    image: '/parentingguide.com.png',
-    tags: ['Next.js', 'Node.js', 'Google Sheet API', 'WhatsApp Business API', 'Vercel'],
-    live: 'https://parentingguide.com'
   },
 ];
 

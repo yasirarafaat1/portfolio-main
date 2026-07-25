@@ -15,7 +15,7 @@ const skills = [
   { name: 'Railway', level: 75, category: 'Deployment' },
   { name: 'VPS', level: 70, category: 'Deployment' },
   { name: 'MongoDB', level: 78, category: 'Database' },
-  { name: 'MySQL', level: 70, category: 'Database' },
+  { name: 'PostreSQL', level: 70, category: 'Database' },
   { name: 'Firebase', level: 78, category: 'Database' },
   { name: 'Supabase', level: 80, category: 'Database' },
   { name: 'Cloudinary', level: 80, category: 'Files Storage' },

@@ -6,6 +6,7 @@ import { Download } from 'lucide-react';
 const Resume = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const resumeUrl = `${import.meta.env.BASE_URL}Yasir%20Arafaat%20Resume.pdf`;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -49,10 +50,10 @@ const Resume = () => {
           variants={itemVariants}
           className="text-xl text-foreground/70 max-w-2xl mx-auto mb-8"
         >
-          Here you can download my resume to get a more detailed look at my skills and experience.
+          Here you can download my resume to get a quick look at my skills and experience.
         </motion.p>
         <motion.div variants={itemVariants}>
-          <a href="/Yasir_Arafaat_Resume.pdf" download="Yasir_Arafaat_Resume.pdf">
+          <a href={resumeUrl} download="Yasir Arafaat Resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button size="lg" variant="outline" className="border-2 border-primary hover:bg-[#6164eb] hover:border-[#6164eb] hover:text-primary-foreground transition-colors duration-300">
               <Download className="w-5 h-5 mr-2" />
               Download Resume

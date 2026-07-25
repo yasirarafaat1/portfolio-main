@@ -47,23 +47,21 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div variants={itemVariants}>
-              <div className="lg:sticky top-2 relative">
-                <motion.div
-                  className="w-80 h-80 mx-auto relative"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
+          <div className="grid items-start gap-12 lg:grid-cols-[420px_1fr] lg:items-start">
+            <div className="lg:sticky lg:top-40 lg:self-start lg:flex lg:justify-center lg:items-center">
+              <motion.div variants={itemVariants} className="flex justify-center w-full lg:justify-center">
+                <div className="w-80 h-80 relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-xl opacity-30"></div>
-                  <img
+                  <motion.img
                     src="/profile.jpeg"
                     alt="Profile"
                     className="relative w-full h-full object-cover rounded-full border-2 border-primary/20"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   />
-                </motion.div>
-              </div>
-            </motion.div>
+                </div>
+              </motion.div>
+            </div>
 
             <motion.div variants={itemVariants} className="space-y-6">
               <Card className="bg-card sm:glass-card border border-border p-6 hover:glow-effect transition-all duration-300">
@@ -71,7 +69,7 @@ const About = () => {
                   What I've Built
                 </h3>
                 <p className="text-foreground/70 leading-relaxed">
-                  I'm currently working with Akamify where I develop full-stack solutions. I've built multiple real-world projects including freelance work and personal applications. My experience spans the complete development cycle - from designing interfaces to deploying production applications. I focus on clean code, performance, and creating applications that actually solve user problems.
+                  I'm currently working with Akamify where I'm a Full Stack Developer focused on building scalable SaaS applications, CRM platforms, WhatsApp Automation systems, and modern web experiences. I enjoy transforming complex business requirements into fast, maintainable, production-ready solutions. My work spans frontend development, backend architecture, API integrations, authentication, databases, deployment, and performance optimization.
                 </p>
               </Card>
 
@@ -90,7 +88,7 @@ const About = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span>Database design & API development</span>
+                    <span>Database design & Rest API development</span>
                   </div>
                 </div>
               </Card>
@@ -100,7 +98,7 @@ const About = () => {
                   My Goal
                 </h3>
                 <p className="text-foreground/70 leading-relaxed">
-                  I'm passionate about creating apps that are fast, intuitive, and solve real problems. I love learning new technologies and staying updated with industry trends. Every project is an opportunity to improve my skills and deliver quality solutions.
+                  Currently focused on building production-grade SaaS products with modern architecture, improving system scalability, learning advanced backend engineering, and preparing for software engineering opportunities at top product companies.
                 </p>
               </Card>
             </motion.div>
