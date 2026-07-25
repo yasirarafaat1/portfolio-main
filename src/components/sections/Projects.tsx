@@ -53,7 +53,7 @@ const projects = [
     description: 'A scalable e-commerce application offering smooth user experience, integrated payments, and robust product management.',
     image: '/amilagold.png',
     tags: ['Next.js', 'Node.js', 'MogoDB', 'Cloudinary', 'Brevo', 'Razorpay'],
-    live: 'https://jaggery-frontend-drab.vercel.app/'
+    live: 'https://www.amilagold.com'
   },
   {
     id: 3,
